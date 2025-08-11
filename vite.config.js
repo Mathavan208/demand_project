@@ -10,5 +10,9 @@ export default defineConfig({
         manualChunks: undefined
       }
     }
+  },
+  // Add this for client-side routing
+  server: {
+    historyApiFallback: true,
   }
 });
