@@ -18,9 +18,27 @@ const CourseCard = ({ course }) => {
     });
   };
 
+  const getStatusColor = () => {
+    if (course.status === 'available') {
+      return 'bg-green-500';
+    } else {
+      return 'bg-yellow-500';
+    }
+  };
+
+  const getStatusText = () => {
+    if (course.status === 'available') {
+      return 'Available';
+    } else {
+      return 'Upcoming';
+    }
+  };
+
   return (
     <div 
-      className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl"
+      className={`bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl ${
+        course.status === 'upcoming' ? 'opacity-80' : ''
+      }`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -28,15 +46,27 @@ const CourseCard = ({ course }) => {
         <img 
           src={course.image} 
           alt={course.title}
-          className="w-full h-full object-cover"
+          className="object-cover w-full h-full"
         />
       </div>
       <div className="p-6">
-        <h3 className="text-xl font-bold text-deep-blue mb-2">{course.title}</h3>
-        <p className="text-gray-600 mb-4">{course.description}</p>
+        {/* Status Badge */}
+        <div className="flex items-center justify-between mb-3">
+          <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getStatusColor()} text-white`}>
+            {getStatusText()}
+          </span>
+          {course.status === 'upcoming' && (
+            <span className="px-2 py-1 text-xs text-gray-500 bg-gray-100 rounded">
+              {course.launchDate}
+            </span>
+          )}
+        </div>
+        
+        <h3 className="mb-2 text-xl font-bold text-deep-blue">{course.title}</h3>
+        <p className="mb-4 text-gray-600">{course.description}</p>
         
         <div className="mb-4">
-          <h4 className="font-semibold text-deep-blue mb-2">Course Structure:</h4>
+          <h4 className="mb-2 font-semibold text-deep-blue">Course Structure:</h4>
           <div className="flex space-x-2">
             {course.curriculum.map((week, index) => (
               <span key={index} className="bg-deep-blue text-white text-xs font-medium px-2.5 py-0.5 rounded">
@@ -46,12 +76,42 @@ const CourseCard = ({ course }) => {
           </div>
         </div>
         
-        <Link 
-          to={`/courses/${course.id}`}
-          className="inline-block bg-gradient-to-r from-deep-blue to-purple-blue text-white px-4 py-2 rounded-lg hover:from-purple-blue hover:to-light-blue transition-all duration-300"
-        >
-          Learn More
-        </Link>
+        {/* Action Buttons */}
+        <div className="flex flex-col gap-3 sm:flex-row">
+          {course.status === 'available' ? (
+            <>
+              <Link 
+                to={`/courses/${course.id}`}
+                className="flex-1 px-4 py-2 text-center text-white transition-all duration-300 rounded-lg bg-gradient-to-r from-deep-blue to-purple-blue hover:from-purple-blue hover:to-light-blue"
+              >
+                View Details
+              </Link>
+              <a 
+                href={course.paymentLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 px-4 py-2 text-center text-white transition-all duration-300 bg-green-500 rounded-lg hover:bg-green-600"
+              >
+                Buy Now
+              </a>
+            </>
+          ) : (
+            <>
+              <Link 
+                to={`/courses/${course.id}`}
+                className="flex-1 px-4 py-2 text-center text-gray-700 bg-gray-300 rounded-lg"
+              >
+                View Details
+              </Link>
+              <button 
+                className="flex-1 px-4 py-2 text-gray-500 bg-gray-300 rounded-lg cursor-not-allowed"
+                disabled
+              >
+                Coming Soon
+              </button>
+            </>
+          )}
+        </div>
       </div>
     </div>
   );

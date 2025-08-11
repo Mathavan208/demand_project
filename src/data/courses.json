@@ -4,7 +4,9 @@
     "title": "Java Programming",
     "description": "Master Java programming language from basics to advanced concepts.",
     "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-    "syllabus": "Comprehensive Java course covering object-oriented programming, data structures, algorithms, and advanced Java features.",
+    "syllabus": "This comprehensive Java course takes you from the basics of syntax to mastering advanced programming concepts. You’ll learn object-oriented programming, data structures, and algorithms to build efficient and maintainable applications. We also cover multithreading, exception handling, and advanced Java APIs. By the end, you’ll be able to design and develop robust, scalable software solutions.",
+    "status": "available",
+    "paymentLink": "https://rzp.io/rzp/izH8HroC",
     "curriculum": [
       {
         "week": 1,
@@ -39,7 +41,9 @@
     "title": "SQL Database",
     "description": "Learn SQL for database management and data manipulation.",
     "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-    "syllabus": "Comprehensive SQL course covering database design, queries, joins, transactions, and advanced SQL concepts.",
+    "syllabus": "This SQL course focuses on managing and manipulating data in relational databases. You’ll learn how to design databases, write queries, and use joins, subqueries, and aggregate functions. We also cover indexing, optimization, and security practices for efficient database management. By course completion, you’ll be confident in working with real-world datasets and integrating SQL into applications.",
+    "status": "available",
+    "paymentLink": "https://rzp.io/rzp/MUfeEAjY",
     "curriculum": [
       {
         "week": 1,
@@ -74,7 +78,9 @@
     "title": "Python Programming",
     "description": "Explore Python programming for data science, web development, and automation.",
     "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-    "syllabus": "Comprehensive Python course covering syntax, data structures, OOP, web frameworks, and data analysis.",
+    "syllabus": "This comprehensive Java course takes you from the basics of syntax to mastering advanced programming concepts. You’ll learn object-oriented programming, data structures, and algorithms to build efficient and maintainable applications. We also cover multithreading, exception handling, and advanced Java APIs. By the end, you’ll be able to design and develop robust, scalable software solutions.",
+    "status": "available",
+    "paymentLink": "https://rzp.io/rzp/4hzOtOO",
     "curriculum": [
       {
         "week": 1,
@@ -109,7 +115,9 @@
     "title": "React.js",
     "description": "Build modern web applications with React.js and its ecosystem.",
     "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-    "syllabus": "Comprehensive React.js course covering components, state management, hooks, routing, and best practices.",
+    "syllabus": "Our React course teaches you to build dynamic, high-performance user interfaces using component-based architecture. You’ll work with hooks, state management, and routing while integrating APIs for real-time data updates. We’ll cover performance optimization and best practices for large-scale applications. By the end, you’ll have the skills to develop modern, interactive web apps from scratch.",
+    "status": "available",
+    "paymentLink": "https://rzp.io/rzp/enaMxbPl",
     "curriculum": [
       {
         "week": 1,
@@ -144,7 +152,9 @@
     "title": "Node.js",
     "description": "Learn server-side JavaScript with Node.js for backend development.",
     "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-    "syllabus": "Comprehensive Node.js course covering server setup, Express, databases, authentication, and deployment.",
+    "syllabus": "Our Node.js course enables you to build fast, scalable, server-side applications using JavaScript. You’ll learn to create REST APIs, manage authentication, and connect to databases like MongoDB and MySQL. We also cover deployment, security, and performance tuning for production-ready applications. This course prepares you to work on full-stack projects and enterprise-level backends.",
+    "status": "upcoming",
+    "launchDate": "Coming Soon",
     "curriculum": [
       {
         "week": 1,
@@ -178,8 +188,10 @@
     "id": 6,
     "title": "Tailwind CSS",
     "description": "Master utility-first CSS framework for rapid UI development.",
-    "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-    "syllabus": "Comprehensive Tailwind CSS course covering utilities, responsive design, components, and customization.",
+    "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    "syllabus": "This Tailwind CSS course introduces you to a utility-first approach for creating visually appealing, responsive designs quickly. You’ll learn to customize themes, apply responsive breakpoints, and create reusable components. Through hands-on projects, you’ll gain experience in building scalable, maintainable UI layouts. Perfect for developers who want both speed and flexibility in styling.",
+    "status": "upcoming",
+    "launchDate": "Coming Soon",
     "curriculum": [
       {
         "week": 1,
@@ -213,8 +225,10 @@
     "id": 7,
     "title": "HR Communication",
     "description": "Enhance professional communication skills for HR professionals.",
-    "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-    "syllabus": "Comprehensive HR communication course covering effective communication, conflict resolution, and leadership skills.",
+    "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    "syllabus": "Strong communication skills are essential for success in any profession. This course covers effective verbal and written communication, active listening, and presentation techniques. You’ll learn how to express ideas clearly, engage an audience, and adapt your communication style to different situations. Through role-play and feedback, you’ll gain confidence in both professional and personal interactions.",
+    "status": "upcoming",
+    "launchDate": "Coming Soon",
     "curriculum": [
       {
         "week": 1,

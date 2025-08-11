@@ -2,8 +2,14 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import instructorData from '../data/instructors.json';
 import InstructorCard from '../components/InstructorCard';
+import PageTitle from '../components/PageTitle';
 
 const Instructors = () => {
+  // Add page title
+  useEffect(() => {
+    document.title = 'Instructors - Pocket Mentor';
+  }, []);
+
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
   const gridRef = useRef(null);
@@ -30,15 +36,16 @@ const Instructors = () => {
 
   return (
     <section ref={sectionRef} className="py-16 bg-gradient-to-b from-white to-deep-blue/10">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16" ref={titleRef}>
-          <h1 className="text-4xl md:text-5xl font-bold text-deep-blue mb-4">Our Instructors</h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+      <PageTitle title="Instructors" />
+      <div className="container px-4 mx-auto">
+        <div className="mb-16 text-center" ref={titleRef}>
+          <h1 className="mb-4 text-4xl font-bold md:text-5xl text-deep-blue">Our Instructors</h1>
+          <p className="max-w-2xl mx-auto text-xl text-gray-600">
             Learn from industry experts with real-world experience and a passion for teaching.
           </p>
         </div>
 
-        <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div ref={gridRef} className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {instructorData.map((instructor) => (
             <InstructorCard key={instructor.id} instructor={instructor} />
           ))}

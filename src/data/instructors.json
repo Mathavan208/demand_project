@@ -4,21 +4,21 @@
     "name": "Mathavan",
     "profession": "Developer",
    
-    "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    "image": "https://i.postimg.cc/Mprsgwy7/mathavan.jpg",
     "social": {
-      "linkedin": "https://linkedin.com/in/alexjohnson",
+      "linkedin": "https://www.linkedin.com/in/mathavan-s-01716b249",
       
-      "github": "https://github.com/alexjohnson"
+      "github": "https://i.postimg.cc/YC1KHhC6/profile.jpg"
     }
   },
   {
     "id": 2,
     "name": "Mukhilan",
-    "profession": "Developer",
+    "profession": "Developer-TCS",
     
-    "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    "image": "https://i.postimg.cc/rFHFm0T7/mukhil.jpg",
     "social": {
-      "linkedin": "https://linkedin.com/in/sarahwilliams",
+      "linkedin": "http://www.linkedin.com/in/mukhilanss",
      
       "github": "https://github.com/sarahwilliams"
     }
@@ -28,36 +28,39 @@
     "name": "Jayasuriya",
     "profession": "Developer",
     
-    "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    "image": "https://i.postimg.cc/pdcpDGMX/jayasuriya.jpg",
     "social": {
-      "linkedin": "https://linkedin.com/in/michaelchen",
+      "linkedin": "http://www.linkedin.com/in/jayasuriya-r-6b6805258",
      
       "github": "https://github.com/michaelchen"
     }
-  },
+  }
+  
+  ,
   {
-    "id": 4,
-    "name": "Subhiksha",
-    "profession": "Developer",
+    "id": 5,
+    "name": "Siva sankar",
+    "profession": "Developer-INFOSYS",
    
-    "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    "image": "https://i.postimg.cc/PrTFw2Xw/siva.jpg",
     "social": {
-      "linkedin": "https://linkedin.com/in/emilyrodriguez",
+      "linkedin": "https://www.linkedin.com/in/sivashankar-s-33117b249/",
       
-      "github": "https://github.com/emilyrodriguez"
+      "github": "https://github.com/davidkim"
     }
   },
   {
     "id": 5,
-    "name": "Siva sankar",
+    "name": "Mohana Prasadh",
     "profession": "Developer",
    
-    "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    "image": "https://i.postimg.cc/Vk115jTG/mohan.jpg",
     "social": {
-      "linkedin": "https://linkedin.com/in/davidkim",
+      "linkedin": "https://www.linkedin.com/in/mohana-prasath-23b733227/",
       
       "github": "https://github.com/davidkim"
     }
   }
   
 ]
+
