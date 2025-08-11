@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const heroRef = useRef(null);
@@ -34,21 +35,21 @@ const Home = () => {
   }, []);
 
   return (
-    <div ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div ref={heroRef} className="relative flex items-center justify-center min-h-screen overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-deep-blue via-purple-blue to-light-blue to-light-purple opacity-90"></div>
       <div className="absolute inset-0 bg-black bg-opacity-30"></div>
       
       {/* Animated background shapes */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-        <div className="absolute -top-40 -right-32 w-80 h-80 bg-purple-blue rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-        <div className="absolute -bottom-8 -left-32 w-80 h-80 bg-light-blue rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-light-purple rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+        <div className="absolute rounded-full -top-40 -right-32 w-80 h-80 bg-purple-blue mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+        <div className="absolute rounded-full -bottom-8 -left-32 w-80 h-80 bg-light-blue mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+        <div className="absolute transform -translate-x-1/2 -translate-y-1/2 rounded-full top-1/2 left-1/2 w-80 h-80 bg-light-purple mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
       </div>
 
-      <div className="relative z-10 text-center px-4 py-20 max-w-4xl mx-auto">
+      <div className="relative z-10 max-w-4xl px-4 py-20 mx-auto text-center">
         <h1 
           ref={titleRef}
-          className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
+          className="mb-6 text-4xl font-bold leading-tight text-white md:text-6xl"
         >
           <span className="block">Empowering Your Future</span>
           <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-light-purple to-light-blue">
@@ -58,24 +59,24 @@ const Home = () => {
         
         <p 
           ref={subtitleRef}
-          className="text-xl md:text-2xl text-light-blue mb-10 max-w-2xl mx-auto"
+          className="max-w-2xl mx-auto mb-10 text-xl md:text-2xl text-light-blue"
         >
           Master in-demand skills with our expert-led courses in Java, SQL, Python, React.js, Node.js, Tailwind CSS, and HR Communication.
         </p>
         
         <div 
           ref={buttonRef}
-          className="flex flex-col sm:flex-row justify-center gap-4"
+          className="flex flex-col justify-center gap-4 sm:flex-row"
         >
-          <a 
-            href="/courses"
-            className="bg-white text-deep-blue hover:bg-gray-100 font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+          <Link 
+            to="/courses"
+            className="px-8 py-3 text-lg font-bold transition-all duration-300 transform bg-white rounded-full shadow-lg text-deep-blue hover:bg-gray-100 hover:scale-105"
           >
             Explore Courses
-          </a>
+          </Link>
           <a 
             href="/instructors"
-            className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-deep-blue font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105"
+            className="px-8 py-3 text-lg font-bold text-white transition-all duration-300 transform bg-transparent border-2 border-white rounded-full hover:bg-white hover:text-deep-blue hover:scale-105"
           >
             Meet Instructors
           </a>
