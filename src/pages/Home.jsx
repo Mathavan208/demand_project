@@ -4,7 +4,7 @@ import instructorData from '../data/instructors.json';
 import InstructorCard from '../components/InstructorCard';
 import Footer from '../components/Footer';
 import PageTitle from '../components/PageTitle';
-
+import { Link } from 'react-router-dom';
 const Home = () => {
   // Add page title
   useEffect(() => {
@@ -142,12 +142,12 @@ const Home = () => {
                 </p>
               </div>
               
-              <a 
-                href="/courses"
+              <Link 
+                to="/courses"
                 className="inline-block px-8 py-3 font-bold text-white transition-all duration-300 transform rounded-lg shadow-lg bg-gradient-to-r from-deep-blue to-purple-blue hover:from-purple-blue hover:to-light-blue hover:scale-105"
               >
                 Enroll Now
-              </a>
+              </Link>
             </div>
           </div>
         </div>

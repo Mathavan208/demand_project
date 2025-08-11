@@ -94,7 +94,7 @@ const Courses = () => {
 
         {/* Course Statistics */}
         <div className="p-8 mt-16 text-white bg-gradient-to-r from-deep-blue to-purple-blue rounded-xl">
-          <h3 className="mb-6 text-2xl font-bold text-center">Why Choose Our Courses?</h3>
+          <h3 className="mb-6 text-2xl font-bold text-center">Course Availability</h3>
           <div className="grid grid-cols-1 gap-8 text-center md:grid-cols-3">
             <div>
               <div className="mb-2 text-4xl font-bold">4</div>
