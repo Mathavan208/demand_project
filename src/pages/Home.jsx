@@ -74,12 +74,12 @@ const Home = () => {
           >
             Explore Courses
           </Link>
-          <a 
+          <Link 
             href="/instructors"
             className="px-8 py-3 text-lg font-bold text-white transition-all duration-300 transform bg-transparent border-2 border-white rounded-full hover:bg-white hover:text-deep-blue hover:scale-105"
           >
             Meet Instructors
-          </a>
+          </Link>
         </div>
       </div>
     </div>
