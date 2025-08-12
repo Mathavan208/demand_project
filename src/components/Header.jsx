@@ -1,15 +1,36 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { gsap } from 'gsap';
+import Logo from './Logo';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const headerRef = useRef(null);
   const navRef = useRef(null);
   const menuButtonRef = useRef(null);
   const logoRef = useRef(null);
-  const titleRef = useRef(null);
+
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Close menu when route changes and scroll to top
+  useEffect(() => {
+    setIsMenuOpen(false);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }, [location]);
 
   // Close menu when route changes
   useEffect(() => {
@@ -23,30 +44,15 @@ const Header = () => {
       { opacity: 0, y: -20 },
       { opacity: 1, y: 0, duration: 0.5, stagger: 0.1, ease: 'power2.out' }
     );
-
-    // Logo and title entrance animation
-    gsap.fromTo(
-      [logoRef.current, titleRef.current],
-      { scale: 0.8, opacity: 0 },
-      { 
-        scale: 1, 
-        opacity: 1, 
-        duration: 0.8, 
-        delay: 0.2, 
-        stagger: 0.1,
-        ease: 'back.out(1.7)' 
-      }
-    );
   }, []);
 
   // Enhanced hover animations
   useEffect(() => {
     const logo = logoRef.current;
-    const title = titleRef.current;
-    if (!logo || !title) return;
+    if (!logo) return;
 
     const handleMouseEnter = () => {
-      gsap.to([logo, title], {
+      gsap.to(logo, {
         scale: 1.15,
         duration: 0.4,
         ease: 'power2.out'
@@ -54,7 +60,7 @@ const Header = () => {
     };
 
     const handleMouseLeave = () => {
-      gsap.to([logo, title], {
+      gsap.to(logo, {
         scale: 1,
         duration: 0.4,
         ease: 'power2.out'
@@ -86,7 +92,10 @@ const Header = () => {
     e.preventDefault();
     const element = document.getElementById('instructors');
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      window.scrollTo({
+        top: element.offsetTop - 80,
+        behavior: 'smooth'
+      });
     }
   };
 
@@ -94,7 +103,10 @@ const Header = () => {
     e.preventDefault();
     const element = document.getElementById('footer');
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      window.scrollTo({
+        top: element.offsetTop - 80,
+        behavior: 'smooth'
+      });
     }
   };
 
@@ -106,37 +118,46 @@ const Header = () => {
   ];
 
   return (
-    <header ref={headerRef} className="sticky top-0 z-50 text-white shadow-lg bg-gradient-to-r from-deep-blue to-purple-blue">
+    <header 
+      ref={headerRef}
+      className={`bg-gradient-to-r from-deep-blue to-purple-blue text-white shadow-lg sticky top-0 z-50 transition-all duration-300 ${
+        isScrolled ? 'py-2 shadow-xl' : 'py-4'
+      }`}
+    >
       <div className="container px-4 mx-auto">
-        <div className="flex items-center justify-between py-4">
-          {/* Logo and Title Container */}
-          <Link to="/" className="flex items-center space-x-4 transition-opacity hover:opacity-90 group">
-            <div className="relative">
-              <img 
-                ref={logoRef}
-                src="https://i.postimg.cc/LsSXKJjf/logo.jpg" 
-                alt="Pocket Mentor Logo"
-                className="object-contain w-auto h-16 transition-all shadow-lg duration-400 rounded-2xl group-hover:shadow-xl"
-                onError={(e) => {
-                  e.target.style.display = 'none';
-                  e.target.nextSibling.style.display = 'block';
-                }}
-              />
-              {/* Fallback text if image fails to load */}
-              <span className="hidden text-2xl font-bold text-white">Pocket Mentor</span>
-            </div>
-            
-            {/* Title with enhanced styling */}
-            <div ref={titleRef} className="transition-all duration-400">
-              <h1 className="text-3xl font-bold leading-tight text-white">
-                <span className="block">Pocket</span>
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-light-purple to-light-blue">
-                  Mentor
-                </span>
-              </h1>
+        <div className="flex items-center justify-between">
+          {/* Logo and Title */}
+          <div className="flex items-center">
+            <Link to="/" className="flex items-center space-x-3 transition-opacity hover:opacity-90 group">
+              <div className="relative">
+                <img 
+                  ref={logoRef}
+                  src="https://i.postimg.cc/x84Hfvhn/logo.jpg" 
+                  alt="Pocket Mentor Logo"
+                  className="object-contain w-auto h-16 transition-all shadow-lg duration-400 rounded-2xl group-hover:shadow-xl"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'block';
+                  }}
+                />
+                {/* Fallback text if image fails to load */}
+                <span className="hidden text-2xl font-bold text-white">Pocket Mentor</span>
+              </div>
               
-            </div>
-          </Link>
+              {/* Title with enhanced styling */}
+              <div className="transition-all duration-400">
+                <h1 className="text-3xl font-bold leading-tight text-white">
+                  <span className="block">Pocket</span>
+                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-light-purple to-light-blue">
+                    Mentor
+                  </span>
+                </h1>
+                <p className="mt-2 text-sm font-medium tracking-wide text-light-blue">
+                  Your Tech Learning Partner
+                </p>
+              </div>
+            </Link>
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="items-center hidden space-x-8 md:flex">

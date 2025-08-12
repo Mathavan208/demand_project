@@ -60,7 +60,11 @@ const Home = () => {
     "Java",
     "SQL",
     "Python",
-    "React.js"
+    "React.js",
+    "Node js",
+    "tailwind css",
+    "javascript",
+    "last min interview prep"
   ];
 
   return (
@@ -90,12 +94,7 @@ const Home = () => {
             </span>
           </h1>
           
-          <p 
-            ref={subtitleRef}
-            className="max-w-2xl mx-auto mb-10 text-xl md:text-2xl text-light-blue"
-          >
-            Master in-demand skills with our expert-led courses in Java, SQL, Python, and React.js.
-          </p>
+         
           
           <div 
             ref={buttonRef}
@@ -123,7 +122,7 @@ const Home = () => {
               <div className="mb-8">
                 <h3 className="mb-4 text-2xl font-bold text-deep-blue">Fresh to college or still figuring this out on technical topics?</h3>
                 <p className="mb-6 text-lg text-gray-700">
-                  We're launching a 2-Week fast-track training program where you can master any of the following technologies:
+                  We're launching a 2-Week fast-track training program where you can master any of the following technologies and courses:
                 </p>
                 
                 <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -159,7 +158,7 @@ const Home = () => {
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-4xl font-bold md:text-5xl text-deep-blue">Meet Our Instructors</h2>
             <p className="max-w-2xl mx-auto text-xl text-gray-600">
-              Learn from industry experts with real-world experience and a passion for teaching.
+              Learn from experienced educators with real-world experience and a passion for teaching.
             </p>
           </div>
 
@@ -170,12 +169,12 @@ const Home = () => {
           </div>
           
           <div className="mt-12 text-center">
-            <a 
-              href="/instructors"
+            <Link 
+              to="/instructors"
               className="inline-block px-8 py-3 font-bold text-white transition-all duration-300 rounded-lg bg-gradient-to-r from-deep-blue to-purple-blue hover:from-purple-blue hover:to-light-blue"
             >
               View All Instructors
-            </a>
+            </Link>
           </div>
         </div>
       </section>

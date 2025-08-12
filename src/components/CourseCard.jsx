@@ -18,6 +18,15 @@ const CourseCard = ({ course }) => {
     });
   };
 
+  const handleViewDetails = (e) => {
+    // Scroll to top when clicking view details
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  };
+
   const getStatusColor = () => {
     if (course.status === 'available') {
       return 'bg-green-500';
@@ -82,6 +91,7 @@ const CourseCard = ({ course }) => {
             <>
               <Link 
                 to={`/courses/${course.id}`}
+                onClick={handleViewDetails}
                 className="flex-1 px-4 py-2 text-center text-white transition-all duration-300 rounded-lg bg-gradient-to-r from-deep-blue to-purple-blue hover:from-purple-blue hover:to-light-blue"
               >
                 View Details
@@ -99,6 +109,7 @@ const CourseCard = ({ course }) => {
             <>
               <Link 
                 to={`/courses/${course.id}`}
+                onClick={handleViewDetails}
                 className="flex-1 px-4 py-2 text-center text-gray-700 bg-gray-300 rounded-lg"
               >
                 View Details
