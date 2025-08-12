@@ -5,57 +5,59 @@ import InstructorCard from '../components/InstructorCard';
 import Footer from '../components/Footer';
 import PageTitle from '../components/PageTitle';
 import { Link } from 'react-router-dom';
+
 const Home = () => {
   // Add page title
   useEffect(() => {
     document.title = 'Home - Pocket Mentor';
   }, []);
-
+  
   const heroRef = useRef(null);
   const titleRef = useRef(null);
   const subtitleRef = useRef(null);
   const buttonRef = useRef(null);
+  const infoRef = useRef(null);
   const motiveRef = useRef(null);
   const instructorsRef = useRef(null);
-
+  
   useEffect(() => {
     gsap.fromTo(
       heroRef.current,
       { opacity: 0 },
       { opacity: 1, duration: 1, ease: 'power2.out' }
     );
-
     gsap.fromTo(
       titleRef.current,
       { y: 50, opacity: 0 },
       { y: 0, opacity: 1, duration: 1, delay: 0.3, ease: 'power2.out' }
     );
-
     gsap.fromTo(
       subtitleRef.current,
       { y: 30, opacity: 0 },
       { y: 0, opacity: 1, duration: 1, delay: 0.6, ease: 'power2.out' }
     );
-
     gsap.fromTo(
       buttonRef.current,
       { y: 20, opacity: 0 },
       { y: 0, opacity: 1, duration: 1, delay: 0.9, ease: 'power2.out' }
     );
-
     gsap.fromTo(
-      motiveRef.current,
+      infoRef.current,
       { opacity: 0, y: 30 },
       { opacity: 1, y: 0, duration: 1, delay: 1.2, ease: 'power2.out' }
     );
-
     gsap.fromTo(
-      instructorsRef.current,
+      motiveRef.current,
       { opacity: 0, y: 30 },
       { opacity: 1, y: 0, duration: 1, delay: 1.5, ease: 'power2.out' }
     );
+    gsap.fromTo(
+      instructorsRef.current,
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 1, delay: 1.8, ease: 'power2.out' }
+    );
   }, []);
-
+  
   const technologies = [
     "Java",
     "SQL",
@@ -82,7 +84,6 @@ const Home = () => {
           <div className="absolute rounded-full -bottom-8 -left-32 w-80 h-80 bg-light-blue mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
           <div className="absolute transform -translate-x-1/2 -translate-y-1/2 rounded-full top-1/2 left-1/2 w-80 h-80 bg-light-purple mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
         </div>
-
         <div className="relative z-10 max-w-4xl px-4 py-20 mx-auto text-center">
           <h1 
             ref={titleRef}
@@ -94,17 +95,62 @@ const Home = () => {
             </span>
           </h1>
           
-         
+          <p ref={subtitleRef} className="mb-10 text-xl text-white">
+            Fast-track training programs for freshers to tech leaders
+          </p>
           
           <div 
             ref={buttonRef}
             className="flex flex-col justify-center gap-4 sm:flex-row"
           >
-           
+            <Link 
+              to="/courses"
+              className="inline-block px-8 py-3 font-bold text-white transition-all duration-300 transform rounded-lg shadow-lg bg-gradient-to-r from-deep-blue to-purple-blue hover:from-purple-blue hover:to-light-blue hover:scale-105"
+            >
+              Explore Courses
+            </Link>
+            <Link 
+              to="/instructors"
+              className="inline-block px-8 py-3 font-bold text-white transition-all duration-300 transform border-2 border-white rounded-lg hover:bg-white hover:text-deep-blue hover:scale-105"
+            >
+              Meet Instructors
+            </Link>
           </div>
         </div>
       </div>
-
+      
+      {/* Important Information Section */}
+      <section ref={infoRef} className="py-12 bg-gradient-to-b from-white to-deep-blue/5">
+        <div className="container px-4 mx-auto">
+          <div className="max-w-4xl p-8 mx-auto border border-blue-100 shadow-lg bg-blue-50 rounded-xl">
+            <h2 className="mb-6 text-2xl font-bold text-center text-deep-blue">Important Information for Learners</h2>
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+              <div className="p-4 bg-white rounded-lg shadow">
+                <div className="flex items-center justify-center w-12 h-12 mb-4 text-white bg-blue-500 rounded-full">
+                  <span className="text-xl font-bold">1</span>
+                </div>
+                <h3 className="mb-2 font-bold text-deep-blue">Class Timings</h3>
+                <p className="text-gray-700">All sessions after 6:00 PM and before 10:00 PM.</p>
+              </div>
+              <div className="p-4 bg-white rounded-lg shadow">
+                <div className="flex items-center justify-center w-12 h-12 mb-4 text-white bg-blue-500 rounded-full">
+                  <span className="text-xl font-bold">2</span>
+                </div>
+                <h3 className="mb-2 font-bold text-deep-blue">After Payment</h3>
+                <p className="text-gray-700">Complete course details via email.</p>
+              </div>
+              <div className="p-4 bg-white rounded-lg shadow">
+                <div className="flex items-center justify-center w-12 h-12 mb-4 text-white bg-blue-500 rounded-full">
+                  <span className="text-xl font-bold">3</span>
+                </div>
+                <h3 className="mb-2 font-bold text-deep-blue">WhatsApp Group</h3>
+                <p className="text-gray-700">Added to course group for updates.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       {/* Motive Section */}
       <section ref={motiveRef} className="py-16 bg-gradient-to-b from-white to-deep-blue/10">
         <div className="container px-4 mx-auto">
@@ -151,7 +197,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-
+      
       {/* Instructors Section */}
       <section id="instructors" ref={instructorsRef} className="py-16 bg-gradient-to-b from-deep-blue/10 to-white">
         <div className="container px-4 mx-auto">
@@ -161,7 +207,6 @@ const Home = () => {
               Learn from experienced educators with real-world experience and a passion for teaching.
             </p>
           </div>
-
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {instructorData.map((instructor) => (
               <InstructorCard key={instructor.id} instructor={instructor} />
@@ -178,7 +223,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-
+      
       {/* Footer */}
      
     </div>

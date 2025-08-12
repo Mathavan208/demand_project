@@ -13,6 +13,7 @@ const CourseDetail = () => {
   const contentRef = useRef(null);
   const syllabusRef = useRef(null);
   const curriculumRef = useRef(null);
+  const infoRef = useRef(null);
 
   // Add page title
   useEffect(() => {
@@ -25,7 +26,6 @@ const CourseDetail = () => {
     const foundCourse = courseData.find(c => c.id === parseInt(id));
     if (foundCourse) {
       setCourse(foundCourse);
-      // Set active week to 1 when course changes
       setActiveWeek(1);
     }
   }, [id]);
@@ -56,6 +56,11 @@ const CourseDetail = () => {
         curriculumRef.current,
         { opacity: 0, y: 30 },
         { opacity: 1, y: 0, duration: 1, delay: 0.8, ease: 'power2.out' }
+      );
+      gsap.fromTo(
+        infoRef.current,
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 1, delay: 1, ease: 'power2.out' }
       );
     }
   }, [course]);
@@ -117,6 +122,31 @@ const CourseDetail = () => {
             <h1 className="mb-4 text-4xl font-bold text-deep-blue">{course.title}</h1>
             <p className="mb-8 text-xl text-gray-600">{course.description}</p>
             
+            {/* Important Information for Learners */}
+            <div ref={infoRef} className="p-6 mb-8 border border-blue-100 bg-blue-50 rounded-xl">
+              <h3 className="mb-4 text-lg font-bold text-deep-blue">Important Information for Learners:</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <span className="flex items-center justify-center flex-shrink-0 w-6 h-6 mt-1 mr-3 text-sm font-bold text-white bg-blue-500 rounded-full">
+                    1
+                  </span>
+                  <span className="text-gray-700">Class Timings: All sessions after 6:00 PM and before 10:00 PM.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="flex items-center justify-center flex-shrink-0 w-6 h-6 mt-1 mr-3 text-sm font-bold text-white bg-blue-500 rounded-full">
+                    2
+                  </span>
+                  <span className="text-gray-700">After Payment: Complete course details via email.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="flex items-center justify-center flex-shrink-0 w-6 h-6 mt-1 mr-3 text-sm font-bold text-white bg-blue-500 rounded-full">
+                    3
+                  </span>
+                  <span className="text-gray-700">WhatsApp Group: Added to course group for updates.</span>
+                </li>
+              </ul>
+            </div>
+            
             {course.status === 'available' ? (
               <a 
                 href={course.paymentLink}
@@ -145,8 +175,8 @@ const CourseDetail = () => {
                     {index + 1}
                   </span>
                   <span className={index === 3 ? "font-bold text-gray-800" : "text-gray-700"}>
-  {point}
-</span>
+                    {point}
+                  </span>
                 </li>
               ))}
             </ul>
