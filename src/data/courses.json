@@ -154,11 +154,11 @@
   {
     "id": 5,
     "title": "React.js",
-    "description": "Build modern web applications with React.js and its ecosystem.",
+    "description": "Master in-demand skills with our expert-led React.js course, covering component-based architecture, state management, hooks, and advanced techniques for building modern, scalable web applications.",
     "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-    "syllabus": "Our React course teaches you to build dynamic, high-performance user interfaces using component-based architecture. You’ll work with hooks, state management, and routing while integrating APIs for real-time data updates. We’ll cover performance optimization and best practices for large-scale applications. By the end, you’ll have the skills to develop modern, interactive web apps from scratch.",
-    "status": "upcoming",
-    "launchDate": "Coming Soon",
+    "syllabus":  "React.js is one of the most popular JavaScript libraries for building interactive user interfaces. This course takes you from the fundamentals of components and JSX to advanced concepts like hooks, context API, and performance optimization. You’ll build multiple projects, learning how to create reusable components, manage complex application state, and integrate APIs for dynamic data.",
+    "status": "available",
+    "paymentLink": "https://rzp.io/rzp/Pcnd0Hz6",
     "curriculum": [
       {
         "week": 1,
