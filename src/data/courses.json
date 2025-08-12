@@ -111,13 +111,47 @@
     ]
   },
   {
-    "id": 4,
+  "id": 4,
+  "title": "JavaScript – 2-Week Fast-Track Program",
+  "description": "A high-impact JavaScript course designed to take you from basics to advanced concepts in just two weeks. Learn core syntax, DOM manipulation, event handling, ES6+ features, and asynchronous programming. Build hands-on projects to master practical skills for modern web development.",
+  "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+  "syllabus": "This intensive two-week JavaScript program covers everything from fundamental concepts to advanced techniques used in modern web applications. Week 1 focuses on core JavaScript, variables, functions, DOM manipulation, and event handling. Week 2 dives into ES6+ features, asynchronous programming, modules, storage APIs, and a final project. By the end, you'll be able to create interactive and dynamic web applications with confidence.",
+  "status": "available",
+  "paymentLink": "https://rzp.io/rzp/enaMxbPl",
+  
+  "curriculum": [
+    {
+      "week": 1,
+      "topics": [
+        "Variables & Data Types",
+        "Operators & Expressions",
+        "Functions",
+        "DOM Manipulation",
+        "Events",
+        "Arrays & Objects"
+      ]
+    },
+    {
+      "week": 2,
+      "topics": [
+        "ES6+ Features",
+        "Asynchronous JS (Callbacks, Promises, Async/Await)",
+        "Error Handling",
+        "Modules & Imports",
+        "Local Storage & Session Storage",
+        "Mini Project – Interactive Web App"
+      ]
+    }
+  ]
+},
+  {
+    "id": 5,
     "title": "React.js",
     "description": "Build modern web applications with React.js and its ecosystem.",
     "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
     "syllabus": "Our React course teaches you to build dynamic, high-performance user interfaces using component-based architecture. You’ll work with hooks, state management, and routing while integrating APIs for real-time data updates. We’ll cover performance optimization and best practices for large-scale applications. By the end, you’ll have the skills to develop modern, interactive web apps from scratch.",
-    "status": "available",
-    "paymentLink": "https://rzp.io/rzp/enaMxbPl",
+    "status": "upcoming",
+    "launchDate": "Coming Soon",
     "curriculum": [
       {
         "week": 1,
@@ -148,7 +182,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "Node.js",
     "description": "Learn server-side JavaScript with Node.js for backend development.",
     "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
@@ -185,7 +219,7 @@
     ]
   },
   {
-    "id": 6,
+    "id": 7,
     "title": "Tailwind CSS",
     "description": "Master utility-first CSS framework for rapid UI development.",
     "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
@@ -222,7 +256,7 @@
     ]
   },
   {
-    "id": 7,
+    "id": 8,
     "title": "HR Communication",
     "description": "Enhance professional communication skills for HR professionals.",
     "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
