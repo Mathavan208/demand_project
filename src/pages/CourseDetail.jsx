@@ -37,25 +37,21 @@ const CourseDetail = () => {
         { opacity: 0 },
         { opacity: 1, duration: 1, ease: 'power2.out' }
       );
-
       gsap.fromTo(
         imageRef.current,
         { opacity: 0, x: -50 },
         { opacity: 1, x: 0, duration: 1, delay: 0.2, ease: 'power2.out' }
       );
-
       gsap.fromTo(
         contentRef.current,
         { opacity: 0, x: 50 },
         { opacity: 1, x: 0, duration: 1, delay: 0.4, ease: 'power2.out' }
       );
-
       gsap.fromTo(
         syllabusRef.current,
         { opacity: 0, y: 30 },
         { opacity: 1, y: 0, duration: 1, delay: 0.6, ease: 'power2.out' }
       );
-
       gsap.fromTo(
         curriculumRef.current,
         { opacity: 0, y: 30 },
@@ -77,6 +73,9 @@ const CourseDetail = () => {
     );
   }
 
+  // Convert syllabus to bullet points with shorter sentences
+  const syllabusPoints = course.syllabus.split('. ').filter(point => point.trim() !== '');
+
   return (
     <section ref={sectionRef} className="py-16 bg-gradient-to-b from-deep-blue/10 to-white">
       <PageTitle title={course.title} />
@@ -90,7 +89,6 @@ const CourseDetail = () => {
           </svg>
           Back to Courses
         </Link>
-
         <div className="grid grid-cols-1 gap-12 mb-16 lg:grid-cols-2">
           <div ref={imageRef}>
             <div className="overflow-hidden shadow-2xl rounded-xl">
@@ -137,13 +135,20 @@ const CourseDetail = () => {
             )}
           </div>
         </div>
-
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
           <div ref={syllabusRef} className="p-8 bg-white shadow-lg rounded-xl">
             <h2 className="mb-6 text-2xl font-bold text-deep-blue">Syllabus & Overview</h2>
-            <p className="leading-relaxed text-gray-600">{course.syllabus}</p>
+            <ul className="space-y-3">
+              {syllabusPoints.map((point, index) => (
+                <li key={index} className="flex items-start">
+                  <span className="flex items-center justify-center flex-shrink-0 w-6 h-6 mt-1 mr-3 text-sm font-bold text-white rounded-full bg-deep-blue">
+                    {index + 1}
+                  </span>
+                  <span className="text-gray-700">{point}</span>
+                </li>
+              ))}
+            </ul>
           </div>
-
           <div ref={curriculumRef} className="p-8 bg-white shadow-lg rounded-xl">
             <h2 className="mb-6 text-2xl font-bold text-deep-blue">Course Curriculum</h2>
             
@@ -166,7 +171,6 @@ const CourseDetail = () => {
                 ))}
               </div>
             </div>
-
             {/* Week Content */}
             <div className="pt-6 border-t">
               <h3 className="mb-4 text-xl font-semibold text-deep-blue">
@@ -183,7 +187,6 @@ const CourseDetail = () => {
                 ))}
               </div>
             </div>
-
             {/* Week Overview */}
             <div className="p-4 mt-8 rounded-lg bg-blue-50">
               <h4 className="mb-2 font-semibold text-deep-blue">Week {activeWeek} Overview</h4>
