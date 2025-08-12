@@ -144,7 +144,9 @@ const CourseDetail = () => {
                   <span className="flex items-center justify-center flex-shrink-0 w-6 h-6 mt-1 mr-3 text-sm font-bold text-white rounded-full bg-deep-blue">
                     {index + 1}
                   </span>
-                  <span className="text-gray-700">{point}</span>
+                  <span className={index === 3 ? "font-bold text-gray-800" : "text-gray-700"}>
+  {point}
+</span>
                 </li>
               ))}
             </ul>
