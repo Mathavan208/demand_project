@@ -1,0 +1,49 @@
+[
+  {
+    "id": 1,
+    "title": "GSAP Fundamentals",
+    "description": "Learn the core concepts of GSAP and start creating smooth animations in no time.",
+    "status": "available",
+    "image": "https://i.ibb.co/rGWztPHL/gsap.png",
+    
+    "level": "Beginner",
+    "prerequisites": "Basic JavaScript knowledge",
+    
+    "topics": [
+      "GSAP Introduction",
+      "Basic Tweening",
+      "Timeline Basics",
+      "Easing Functions",
+      "Staggers"
+    ],
+    "schedule": [
+      {
+        "title": "Introduction to GSAP",
+        "duration": "15 min",
+        "description": "What is GSAP and why use it?"
+      },
+      {
+        "title": "Creating Your First Animation",
+        "duration": "30 min",
+        "description": "Hands-on practice with basic tweens"
+      },
+      {
+        "title": "Advanced Techniques",
+        "duration": "35 min",
+        "description": "Timelines, staggers, and easing"
+      },
+      {
+        "title":"Gsap template demo",
+        "duration": "15 min",
+        "description": "Creating a reusable GSAP animation template"
+      },
+
+      {
+        "title": "Q&A and Wrap-up",
+        "duration": "60 min",
+        "description": "Answer your questions and next steps"
+      }
+    ],
+    "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSfwLvd6aEa6w9i0IvXTQFHmK0ExKF9I_lZcnigOvL8jORcxTA/viewform?usp=dialog"
+  }
+]
