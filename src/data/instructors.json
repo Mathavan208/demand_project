@@ -60,6 +60,18 @@
       
       "github": "https://github.com/davidkim"
     }
+  },
+  {
+    "id": 6,
+    "name": "Nikhil",
+    "profession": "Business analyst",
+   
+    "image": "https://i.ibb.co/4ZCvN04W/NIKHIL.jpg",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/nikhil-prakash-635063260?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      
+      "github": "https://github.com/davidkim"
+    }
   }
   
 ]
